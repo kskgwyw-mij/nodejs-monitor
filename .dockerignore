@@ -1,0 +1,12 @@
+node_modules
+data
+test
+certs
+.git
+.env
+.env.*
+*.pem
+*.key
+*.log
+Dockerfile
+.dockerignore

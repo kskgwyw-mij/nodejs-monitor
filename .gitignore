@@ -147,3 +147,14 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# ---- SecureNotes website ----
+# Keep the example env file (the template above ignores .env.*)
+!.env.example
+# Runtime data (SQLite database, sessions)
+data/*
+!data/.gitkeep
+# TLS keys/certificates
+*.pem
+*.key
+certs/
