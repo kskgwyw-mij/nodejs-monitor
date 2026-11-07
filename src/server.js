@@ -4,10 +4,12 @@ import https from 'node:https';
 import { createApp } from './app.js';
 import { loadConfig } from './config.js';
 import { openDatabase } from './db.js';
+import { loadDotEnv } from './env.js';
 
 // Files we create (database, WAL, etc.) are readable by this user only.
 process.umask(0o077);
 
+loadDotEnv();
 const config = loadConfig();
 const db = openDatabase(config.databasePath);
 const app = createApp({ config, db });
